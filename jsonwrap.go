@@ -39,7 +39,6 @@ func New() *JsonWraper {
 
 // TODO перехватить MarshalJSON
 func (wraper *JsonWraper) marshal(sb *strings.Builder, level int, fieldsType reflect.Type) (exitError error) {
-	fmt.Println(fieldsType)
 	defer func() {
 		if r := recover(); r != nil {
 			exitError = fmt.Errorf("unsupport error")

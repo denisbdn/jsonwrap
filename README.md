@@ -178,3 +178,9 @@ Cout:
 					} // ptr,  
 			} // struct, it's call time field 
 	}
+	
+Additionaly you can set your own format function insted inner
+	
+	multyLine.Format = func(wraper *jsonwrap.JsonWraper, kind reflect.Kind, name string, comment string) string {
+		return "..."
+	}

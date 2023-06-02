@@ -6,7 +6,7 @@ This is useful for automatically generating descriptions involving json objects.
 Usage.
 Download library:
 
-go get github.com/denisbdn/jsonwrap
+	go get github.com/denisbdn/jsonwrap
 
 In code:
 

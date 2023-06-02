@@ -168,8 +168,12 @@ func (wraper *JsonWraper) marshal(sb *strings.Builder, level int, fieldsType ref
 	return
 }
 
-func (wraper *JsonWraper) Marshal(v interface{}) ([]byte, error) {
+func (wraper *JsonWraper) MarshalByType(t reflect.Type) ([]byte, error) {
 	sb := strings.Builder{}
-	err := wraper.marshal(&sb, 0, reflect.TypeOf(v))
+	err := wraper.marshal(&sb, 0, t)
 	return []byte(sb.String()), err
+}
+
+func (wraper *JsonWraper) Marshal(v interface{}) ([]byte, error) {
+	return wraper.MarshalByType(reflect.TypeOf(v))
 }

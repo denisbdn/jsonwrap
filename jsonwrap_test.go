@@ -2,6 +2,7 @@ package jsonwrap
 
 import (
 	"fmt"
+	"reflect"
 	"testing"
 	"time"
 )
@@ -42,4 +43,12 @@ func TestJsonWraper(t *testing.T) {
 	str2 := string(arr2[:])
 	fmt.Println(str2)
 	t.Log(str2)
+
+	arr3, err3 := jsonWraper.MarshalByType(reflect.TypeOf(Simple{}))
+	if err3 != nil {
+		t.Error(err3)
+	}
+	str3 := string(arr3[:])
+	fmt.Println(str3)
+	t.Log(str3)
 }

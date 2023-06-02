@@ -1,6 +1,6 @@
 # jsonwrap
 
-This library help Marshal you struct to json string witj c like comments
+This library help Marshal you struct to json string with c-like comments
 
 Usage.
 Download library:
